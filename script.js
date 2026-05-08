@@ -105,6 +105,32 @@ document.getElementById("orderForm").addEventListener("submit",(e)=>{
 
     e.preventDefault();
 
+    // VALUES
+
+const fullname =
+document.getElementById("fullname").value;
+
+const country =
+document.getElementById("country").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const vehicle =
+document.getElementById("vehicle").value;
+
+const year =
+document.getElementById("year").value;
+
+const color =
+document.getElementById("color").value;
+
+const gearbox =
+document.getElementById("gearbox").value;
+
+const budget =
+document.getElementById("budget").value;
+
     const { jsPDF } = window.jspdf;
 
     const doc = new jsPDF();
@@ -165,7 +191,7 @@ logo.onload = function(){
 
     doc.text("Boite : " + gearbox,20,172);
 
-    doc.text("Budget : " + budget,20,184);
+    doc.text("Budget : " + budget + " USD",20,184);
 
     // CONDITIONS
 
@@ -201,16 +227,36 @@ logo.onload = function(){
 
 };
 
-    const whatsappMessage =
+   const whatsappMessage =
 `Bonjour Prime Motors International,
 
 Je viens de remplir ma fiche de commande véhicule.
 
-Nom : ${fullname}
-Véhicule : ${vehicle}
-Année : ${year}
+ Nom : ${fullname}
 
-Je vais envoyer le PDF de ma commande ici.`;
+ Adresse :
+${country}
+
+ Téléphone :
+${phone}
+
+ Véhicule :
+${vehicle}
+
+ Année :
+${year}
+
+ Couleur :
+${color}
+
+ Boîte :
+${gearbox}
+
+ Budget :
+${budget} USD
+
+
+Merci.`;
 
     window.open(
 `https://wa.me/85266820933?text=${encodeURIComponent(whatsappMessage)}`,

@@ -643,76 +643,199 @@
 
             </p>
 
-            <form id="orderForm">
+           <form id="orderForm">
 
-                <input type="text"
-                    id="fullname"
-                    placeholder="Nom et prénom"
-                    required>
+    <!-- NOM -->
 
-                <input type="text"
-                    id="country"
-                    placeholder="Pays / Ville / Quartier"
-                    required>
+    <div class="form-group">
 
-                <input type="text"
-                    id="phone"
-                    placeholder="Téléphone"
-                    required>
+        <label>
+            Nom et prénom
+        </label>
 
-                <input type="text"
-                    id="vehicle"
-                    placeholder="Marque et modèle du véhicule"
-                    required>
+        <input
+            type="text"
+            id="fullname"
+            placeholder="Entrez votre nom complet"
+            required
+        >
 
-                <input type="text"
-                    id="year"
-                    placeholder="Année du véhicule"
-                    required>
+    </div>
 
-                <input type="text"
-                    id="color"
-                    placeholder="Couleur souhaitée"
-                    required>
+    <!-- ADRESSE -->
 
-                <select id="gearbox" required>
+    <div class="form-group">
 
-                    <option value="">
-                        Boîte de vitesse
-                    </option>
+        <label>
+            Pays / Ville / Quartier
+        </label>
 
-                    <option>
-                        Automatique
-                    </option>
+        <input
+            type="text"
+            id="country"
+            placeholder="Ex : Chine - Guangzhou - Tianhe District"
+            required
+        >
 
-                    <option>
-                        Manuelle
-                    </option>
+    </div>
 
-                </select>
+    <!-- TELEPHONE -->
 
-                <input type="text"
-                    id="budget"
-                    placeholder="Budget estimé"
-                    required>
+    <div class="form-group">
 
-                <button type="submit">
+        <label>
+            Numéro WhatsApp
+        </label>
 
-                    Envoyer
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Ex : +86XXXXXXXXX"
+            required
+        >
 
-                </button>
+    </div>
 
-            </form>
+    <!-- VEHICULE -->
+
+    <div class="form-group">
+
+        <label>
+            Marque et modèle du véhicule
+        </label>
+
+        <input
+            type="text"
+            id="vehicle"
+            placeholder="Ex : Toyota Rav4"
+            required
+        >
+
+    </div>
+
+    <!-- ANNEE -->
+
+    <div class="form-group">
+
+        <label>
+            Année du véhicule
+        </label>
+
+        <select id="year" required>
+
+            <option value="">
+                Sélectionnez une année
+            </option>
+
+            <option>2026</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2014</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option>2011</option>
+            <option>2010</option>
+            <option>2009</option>
+            <option>2008</option>
+            <option>2007</option>
+            <option>2006</option>
+            <option>2005</option>
+            <option>2004</option>
+            <option>2003</option>
+            <option>2002</option>
+            <option>2001</option>
+            <option>2000</option>
+
+        </select>
+
+    </div>
+
+    <!-- COULEUR -->
+
+    <div class="form-group">
+
+        <label>
+            Couleur souhaitée
+        </label>
+
+        <input
+            type="text"
+            id="color"
+            placeholder="Ex : Noir, Blanc, Gris..."
+            required
+        >
+
+    </div>
+
+    <!-- BOITE -->
+
+    <div class="form-group">
+
+        <label>
+            Type de boîte
+        </label>
+
+        <select id="gearbox" required>
+
+            <option value="">
+                Sélectionnez
+            </option>
+
+            <option>
+                Automatique
+            </option>
+
+            <option>
+                Manuelle
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- BUDGET -->
+
+    <div class="form-group">
+
+        <label>
+            Budget estimé (USD)
+        </label>
+
+        <input
+            type="number"
+            id="budget"
+            placeholder="Ex : 15000 USD"
+            required
+        >
+
+    </div>
+
+    <!-- BOUTON -->
+
+    <button type="submit">
+
+        Générer ma fiche de commande
+
+    </button>
+
+</form>
 
         </div>
 
     </div>
 
-    <!-- PDF LIBRARY -->
+    <!-- SCRIPT -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-    <!-- SCRIPT -->
 
     <script src="script.js"></script>
 
